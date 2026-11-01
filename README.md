@@ -228,3 +228,56 @@ Intermediate feature maps
 Final inference results
 
 The architecture can use separate instruction and data memories or a shared memory subsystem.
+
+
+## Hardware-Software Co-Design
+
+The system uses a software-controlled hardware acceleration model.
+
+### Execution Flow
+
+The RISC-V processor boots and executes the application.
+
+Input data is loaded into on-chip memory.
+
+Neural network weights are stored in accelerator-accessible memory.
+
+The CPU configures the accelerator through memory-mapped registers.
+
+The CPU issues a start command.
+
+The NPU performs parallel MAC and convolution operations.
+
+The accelerator stores computation results in memory.
+
+The accelerator signals completion through a status register or interrupt.
+
+The RISC-V processor retrieves and processes the results.
+
+### Software Stack
+
+The software component can include:
+
+C/C++ application code
+
+Neural network model preprocessing
+
+Accelerator driver
+
+Memory-mapped register access
+
+Input and weight loading routines
+
+Inference result evaluation
+
+Python can be used for:
+
+Training neural network models
+
+Quantization and preprocessing
+
+Generating hardware-compatible weights
+
+Comparing software and hardware inference results
+
+Performance analysis
