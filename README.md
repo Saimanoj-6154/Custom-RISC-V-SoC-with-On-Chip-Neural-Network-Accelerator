@@ -53,3 +53,43 @@ Functional verification using SystemVerilog testbenches
 FPGA prototyping and testing
 
 Open-source RTL synthesis and physical design flow
+
+## System Architecture
+```
+
+                  CUSTOM RISC-V SoC
++------------------------------------------------------+
+|                                                      |
+|  +-------------------+                               |
+|  |   RISC-V CPU      |                               |
+|  |                   |                               |
+|  | Fetch / Decode    |                               |
+|  | Execute / Memory  |                               |
+|  | Writeback         |                               |
+|  +---------+---------+                               |
+|            |                                         |
+|            |                                         |
+|  +---------v--------------------------------------+  |
+|  |             System Interconnect                |  |
+|  |              AXI / AHB Bus                     |  |
+|  +------+---------------------------+-------------+  |
+|         |                           |                |
+|  +------v------+             +------v-------------+  |
+|  | On-Chip RAM |             | Neural Network     |  |
+|  | / SRAM      |             | Accelerator (NPU)  |  |
+|  +-------------+             +------+-------------+  |
+|                                       |              |
+|                              +--------v---------+    |
+|                              | MAC Array        |    |
+|                              | Convolution Unit |    |
+|                              | Activation Unit  |    |
+|                              | Control Unit     |    |
+|                              +------------------+    |
+|                                                      |
+|  +-------------------+                               |
+|  | Peripheral        |                               |
+|  | Interface         |                               |
+|  +-------------------+                               |
+|                                                      |
++------------------------------------------------------+
+```
