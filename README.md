@@ -166,3 +166,47 @@ RV32IM instruction set
 Custom accelerator instructions
 
 Custom control and status registers
+
+## 2. Neural Network Accelerator (NPU)
+
+The NPU is a dedicated hardware unit designed to accelerate neural network inference.
+
+Instead of executing every neural network operation sequentially on the CPU, the accelerator processes multiple arithmetic operations in parallel.
+
+Its architecture consists of:
+
+MAC Processing Array
+
+Performs parallel multiplication and accumulation operations.
+
+
+
+### Convolution Engine
+
+Performs convolution operations using input feature maps and trained neural network weights.
+
+Activation Unit
+
+Supports activation functions such as:
+
+ReLU
+
+Sigmoid (optional)
+
+Tanh (optional)
+
+### Control Unit
+
+Manages accelerator operation, including:
+
+Start and stop control
+
+Operation selection
+
+Data loading
+
+Computation scheduling
+
+Completion status
+
+Interrupt generation
