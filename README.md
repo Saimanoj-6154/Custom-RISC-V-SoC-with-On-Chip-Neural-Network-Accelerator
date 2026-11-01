@@ -95,45 +95,25 @@ Open-source RTL synthesis and physical design flow
 ```
 ## Major Components
 
-Component
+Component            Description
 
-Description
+RISC-V CPU           Executes software instructions and controls the SoC
 
-RISC-V CPU
+System Interconnect  Enables communication between processing units and peripherals
 
-Executes software instructions and controls the SoC
+NPU                  Performs hardware-accelerated neural network operations
 
-System Interconnect
+MAC Array            Executes parallel multiplication and accumulation
 
-Enables communication between processing units and peripherals
+Convolution Unit     Performs convolution operations
 
-NPU
+Activation Unit      Supports ReLU and other activation functions
 
-Performs hardware-accelerated neural network operations
+On-Chip SRAM         Stores instructions, weights, inputs, and intermediate results
 
-MAC Array
+Control Registers    Configure accelerator operations
 
-Executes parallel multiplication and accumulation
-
-Convolution Unit
-
-Performs convolution operations
-
-Activation Unit
-
-Supports ReLU and other activation functions
-
-On-Chip SRAM
-
-Stores instructions, weights, inputs, and intermediate results
-
-Control Registers
-
-Configure accelerator operations
-
-Peripheral Interface
-
-Supports external communication and debugging
+Peripheral Interface Supports external communication and debugging
 
 
 
@@ -281,3 +261,4 @@ Generating hardware-compatible weights
 Comparing software and hardware inference results
 
 Performance analysis
+
