@@ -1,0 +1,44 @@
+# Simulation
+*.vcd
+*.fst
+*.lxt
+*.log
+*.wlf
+
+# Compiled files
+*.o
+*.out
+*.vvp
+*.exe
+
+# FPGA
+*.bit
+*.bin
+*.jou
+*.wdb
+*.runs/
+*.cache/
+*.hw/
+*.xpr
+
+# Physical design
+*.def
+*.gds
+*.lef
+*.odb
+*.spef
+*.sdf
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
