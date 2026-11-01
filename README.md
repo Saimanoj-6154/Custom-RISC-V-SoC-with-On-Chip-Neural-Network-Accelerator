@@ -518,7 +518,7 @@ Custom-RISC-V-SoC-with-On-Chip-Neural-Network-Accelerator/
 
 * Image classification
 
-*Industrial automation
+* Industrial automation
 
 * IoT devices
 
