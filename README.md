@@ -12,47 +12,47 @@ The RISC-V processor acts as the main control and execution unit, managing progr
 
 The Neural Network Accelerator offloads computationally intensive operations such as:
 
-Matrix multiplication
+* Matrix multiplication
 
-Multiply-Accumulate (MAC) operations
+* Multiply-Accumulate (MAC) operations
 
-Convolution
+* Convolution
 
-Activation functions
+* Activation functions
 
-Neural network inference
+* Neural network inference
 
 The accelerator communicates with the processor through a memory-mapped control interface and a high-bandwidth data interface.
 
 ## Key Features
 
-Custom RISC-V processor-based SoC architecture
+* Custom RISC-V processor-based SoC architecture
 
-On-chip Neural Network Processing Unit (NPU)
+* On-chip Neural Network Processing Unit (NPU)
 
-Hardware-accelerated matrix multiplication
+* Hardware-accelerated matrix multiplication
 
-Parallel Multiply-Accumulate (MAC) datapath
+* Parallel Multiply-Accumulate (MAC) datapath
 
-Convolution computation support
+* Convolution computation support
 
-Configurable neural network accelerator
+* Configurable neural network accelerator
 
-Memory-mapped accelerator control registers
+* Memory-mapped accelerator control registers
 
-AXI4 / AXI4-Lite-based communication architecture
+* AXI4 / AXI4-Lite-based communication architecture
 
-On-chip SRAM and shared memory architecture
+* On-chip SRAM and shared memory architecture
 
-Hardware-software co-design
+* Hardware-software co-design
 
-Modular RTL implementation using Verilog/SystemVerilog
+* Modular RTL implementation using Verilog/SystemVerilog
 
-Functional verification using SystemVerilog testbenches
+* Functional verification using SystemVerilog testbenches
 
-FPGA prototyping and testing
+* FPGA prototyping and testing
 
-Open-source RTL synthesis and physical design flow
+* Open-source RTL synthesis and physical design flow
 
 ## System Architecture
 ```
@@ -288,95 +288,85 @@ NPU Controller               Control and status functionality
 
 ### System-Level Verification      
 
-CPU-to-NPU communication
+* CPU-to-NPU communication
 
-Memory access and data integrity
+* Memory access and data integrity
 
-Accelerator initialization
+* Accelerator initialization
 
-Neural network inference execution
+* Neural network inference execution
 
-Interrupt handling
+* Interrupt handling
 
-Reset and recovery
+* Reset and recovery
 
-Back-to-back accelerator operations
+* Back-to-back accelerator operations
 
 ### Verification Tools
 
-SystemVerilog
+* SystemVerilog
 
-Verilator
+* Verilator
 
-GTKWave
+* GTKWave
 
-QuestaSim / ModelSim (optional)
+* QuestaSim / ModelSim (optional)
 
-Python-based reference models
+* Python-based reference models
 
-Python reference models can generate expected neural network outputs and compare them against RTL simulation results.
+## FPGA Development Tools
 
-## FPGA Implementation
+* AMD Xilinx Vivado
 
-The design can be prototyped on an FPGA to evaluate its functionality and computational performance.
+* Verilog / SystemVerilog
 
-### FPGA Development Tools
+* Xilinx FPGA development boards
 
-AMD Xilinx Vivado
-
-Verilog / SystemVerilog
-
-Xilinx FPGA development boards
-
-Integrated Logic Analyzer (ILA)
+* Integrated Logic Analyzer (ILA)
 
 ### FPGA Evaluation
 
-The implementation can be evaluated using:
+* The implementation can be evaluated using:
 
-Maximum operating frequency
+* Maximum operating frequency
 
-LUT utilization
+* LUT utilization
 
-Flip-flop utilization
+* Flip-flop utilization
 
-BRAM utilization
+* BRAM utilization
 
-DSP utilization
+* DSP utilization
 
-Inference latency
+* Inference latency
 
-Accelerator throughput
+* Accelerator throughput
 
-Power consumption (where supported)
+* Power consumption (where supported)
 
-## ASIC Physical Design Flow
+## Physical Design Stages
 
-The SoC can also be taken through an open-source ASIC implementation flow.
+* RTL Design
 
-### Physical Design Stages
+* RTL Simulation
 
-RTL Design
+* Lint Analysis
 
-RTL Simulation
+* Logic Synthesis
 
-Lint Analysis
+* Floorplanning
 
-Logic Synthesis
+* Power Planning
 
-Floorplanning
+* Placement
 
-Power Planning
+* Clock Tree Synthesis
 
-Placement
+* Routing
 
-Clock Tree Synthesis
+* Static Timing Analysis
 
-Routing
-
-Static Timing Analysis
-
-Design Rule Checking
+* Design Rule Checking
 
 ## TOOLS USED
 ```
@@ -406,3 +396,132 @@ Version Control                Git, GitHub
 
 Operating System               Linux
 ```
+## Repository Structure
+``` 
+Custom-RISC-V-SoC-with-On-Chip-Neural-Network-Accelerator/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+├── Makefile
+│
+├── docs/
+│   ├── architecture/
+│   │   ├── soc_block_diagram.png
+│   │   ├── risc_v_architecture.png
+│   │   ├── npu_architecture.png
+│   │   └── memory_architecture.png
+│   │
+│   ├── design/
+│   │   ├── design_specification.md
+│   │   ├── interface_specification.md
+│   │   └── memory_map.md
+│   │
+│   └── reports/
+│       ├── synthesis_report.md
+│       ├── timing_report.md
+│       └── verification_report.md
+│
+├── rtl/
+│   ├── cpu/
+│   │   ├── riscv_core.sv
+│   │   ├── program_counter.sv
+│   │   ├── instruction_decoder.sv
+│   │   ├── register_file.sv
+│   │   ├── alu.sv
+│   │   └── control_unit.sv
+│   │
+│   ├── npu/
+│   │   ├── npu_top.sv
+│   │   ├── npu_controller.sv
+│   │   ├── mac_unit.sv
+│   │   ├── mac_array.sv
+│   │   ├── convolution_engine.sv
+│   │   ├── activation_unit.sv
+│   │   └── pooling_unit.sv
+│   │
+│   ├── interconnect/
+│   │   ├── axi_interconnect.sv
+│   │   ├── axi_lite_slave.sv
+│   │   └── bus_arbiter.sv
+│   │
+│   ├── memory/
+│   │   ├── instruction_memory.sv
+│   │   ├── data_memory.sv
+│   │   ├── npu_memory.sv
+│   │   └── memory_controller.sv
+│   │
+│   ├── peripherals/
+│   │   ├── gpio.sv
+│   │   ├── uart.sv
+│   │   └── timer.sv
+│   │
+│   └── soc_top.sv
+│
+├── verification/
+│   ├── cpu_tb/
+│   ├── npu_tb/
+│   ├── mac_tb/
+│   ├── convolution_tb/
+│   ├── memory_tb/
+│   └── soc_tb/
+│
+├── software/
+│   ├── firmware/
+│   │   ├── main.c
+│   │   ├── npu_driver.c
+│   │   └── npu_driver.h
+│   │
+│   ├── applications/
+│   │   └── neural_network_inference/
+│   │
+│   └── linker/
+│       └── linker.ld
+│
+├── python/
+│   ├── model_training/
+│   ├── model_quantization/
+│   ├── weight_converter/
+│   ├── reference_model/
+│   └── performance_analysis/
+│
+├── fpga/
+│   ├── constraints/
+│   ├── scripts/
+│   └── vivado_project/
+│
+├── physical_design/
+│   ├── synthesis/
+│   ├── floorplan/
+│   ├── placement/
+│   ├── routing/
+│   └── timing_analysis/
+│
+├── simulation/
+│   ├── scripts/
+│   ├── waveforms/
+│   └── logs/
+│
+└── results/
+    ├── simulation/
+    ├── synthesis/
+    ├── fpga/
+    └── performance/
+```
+## Applications
+
+* Edge AI computing
+
+* Embedded artificial intelligence
+
+* Smart sensors
+
+* Image classification
+
+*Industrial automation
+
+* IoT devices
+
+* Low-power AI inference
+
+* Autonomous embedded systems
