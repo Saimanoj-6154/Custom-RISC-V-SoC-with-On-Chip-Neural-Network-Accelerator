@@ -134,3 +134,35 @@ Configure accelerator operations
 Peripheral Interface
 
 Supports external communication and debugging
+
+
+
+## Hardware Architecture
+
+## 1. RISC-V Processor Core
+
+The RISC-V processor serves as the primary processing unit.
+
+The processor is responsible for:
+
+Instruction fetching and decoding
+
+Arithmetic and logical operations
+
+Memory access
+
+Accelerator configuration
+
+Interrupt handling
+
+Data transfer between memory and accelerator
+
+The initial implementation can use a basic RV32I-compatible processor architecture.
+
+Potential extensions include:
+
+RV32IM instruction set
+
+Custom accelerator instructions
+
+Custom control and status registers
