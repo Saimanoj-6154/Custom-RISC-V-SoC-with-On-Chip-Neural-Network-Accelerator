@@ -210,3 +210,21 @@ Computation scheduling
 Completion status
 
 Interrupt generation
+
+### 3. Memory Architecture
+
+The SoC uses an on-chip memory subsystem to minimize data transfer overhead.
+
+Memory stores:
+
+CPU instructions
+
+Input feature maps
+
+Neural network weights
+
+Intermediate feature maps
+
+Final inference results
+
+The architecture can use separate instruction and data memories or a shared memory subsystem.
