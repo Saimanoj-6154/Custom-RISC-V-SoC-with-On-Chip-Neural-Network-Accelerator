@@ -94,6 +94,7 @@ Open-source RTL synthesis and physical design flow
 +------------------------------------------------------+
 ```
 ## Major Components
+```
 
 Component            Description
 
@@ -115,7 +116,7 @@ Control Registers    Configure accelerator operations
 
 Peripheral Interface Supports external communication and debugging
 
-
+```
 
 ## Hardware Architecture
 
@@ -267,7 +268,7 @@ Performance analysis
 The SoC should be verified at individual module level and system level.
 
 ### Module-Level Verification
-
+```
 Module                        Verification Focus
 
 RISC-V CPU                    Instruction execution and architectural correctness
@@ -283,6 +284,7 @@ Memory Controller            Read/write operations
 System Interconnect          Transaction and arbitration behavior
 
 NPU Controller               Control and status functionality
+```
 
 ### System-Level Verification      
 
@@ -377,7 +379,7 @@ Static Timing Analysis
 Design Rule Checking
 
 ## TOOLS USED
-
+```
 ### Category                        Technologies
 
 HDL                             Verilog, SystemVerilog
@@ -403,3 +405,4 @@ Layout                          Magic VLSI, KLayout
 Version Control                Git, GitHub
 
 Operating System               Linux
+```
