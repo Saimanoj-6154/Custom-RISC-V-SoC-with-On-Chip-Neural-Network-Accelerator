@@ -93,3 +93,44 @@ Open-source RTL synthesis and physical design flow
 |                                                      |
 +------------------------------------------------------+
 ```
+## Major Components
+
+Component
+
+Description
+
+RISC-V CPU
+
+Executes software instructions and controls the SoC
+
+System Interconnect
+
+Enables communication between processing units and peripherals
+
+NPU
+
+Performs hardware-accelerated neural network operations
+
+MAC Array
+
+Executes parallel multiplication and accumulation
+
+Convolution Unit
+
+Performs convolution operations
+
+Activation Unit
+
+Supports ReLU and other activation functions
+
+On-Chip SRAM
+
+Stores instructions, weights, inputs, and intermediate results
+
+Control Registers
+
+Configure accelerator operations
+
+Peripheral Interface
+
+Supports external communication and debugging
