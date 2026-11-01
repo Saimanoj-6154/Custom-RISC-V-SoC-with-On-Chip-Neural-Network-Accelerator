@@ -24,3 +24,32 @@ Neural network inference
 
 The accelerator communicates with the processor through a memory-mapped control interface and a high-bandwidth data interface.
 
+## Key Features
+
+Custom RISC-V processor-based SoC architecture
+
+On-chip Neural Network Processing Unit (NPU)
+
+Hardware-accelerated matrix multiplication
+
+Parallel Multiply-Accumulate (MAC) datapath
+
+Convolution computation support
+
+Configurable neural network accelerator
+
+Memory-mapped accelerator control registers
+
+AXI4 / AXI4-Lite-based communication architecture
+
+On-chip SRAM and shared memory architecture
+
+Hardware-software co-design
+
+Modular RTL implementation using Verilog/SystemVerilog
+
+Functional verification using SystemVerilog testbenches
+
+FPGA prototyping and testing
+
+Open-source RTL synthesis and physical design flow
