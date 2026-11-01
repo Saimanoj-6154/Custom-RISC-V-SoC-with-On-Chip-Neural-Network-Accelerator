@@ -375,3 +375,31 @@ Routing
 Static Timing Analysis
 
 Design Rule Checking
+
+## TOOLS USED
+
+### Category                        Technologies
+
+HDL                             Verilog, SystemVerilog
+
+Processor Architecture          RISC-V
+
+Bus Protocol                    AXI4, AXI4-Lite
+
+Verification                    SystemVerilog, Python
+
+Programming                     C, C++, Python
+
+Simulation                      Verilator, GTKWave
+
+FPGA                            AMD Xilinx Vivado
+
+Synthesis                       Yosys
+
+Physical Design                 OpenROAD, OpenLane
+
+Layout                          Magic VLSI, KLayout
+
+Version Control                Git, GitHub
+
+Operating System               Linux
