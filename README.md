@@ -262,3 +262,116 @@ Comparing software and hardware inference results
 
 Performance analysis
 
+## Verification Methodology
+
+The SoC should be verified at individual module level and system level.
+
+### Module-Level Verification
+
+Module                        Verification Focus
+
+RISC-V CPU                    Instruction execution and architectural correctness
+
+MAC Array                     Multiplication and accumulation accuracy
+
+Convolution Unit             Convolution output correctness
+
+Activation Unit              Activation function correctness
+
+Memory Controller            Read/write operations
+
+System Interconnect          Transaction and arbitration behavior
+
+NPU Controller               Control and status functionality
+
+### System-Level Verification      
+
+CPU-to-NPU communication
+
+Memory access and data integrity
+
+Accelerator initialization
+
+Neural network inference execution
+
+Interrupt handling
+
+Reset and recovery
+
+Back-to-back accelerator operations
+
+### Verification Tools
+
+SystemVerilog
+
+Verilator
+
+GTKWave
+
+QuestaSim / ModelSim (optional)
+
+Python-based reference models
+
+Python reference models can generate expected neural network outputs and compare them against RTL simulation results.
+
+## FPGA Implementation
+
+The design can be prototyped on an FPGA to evaluate its functionality and computational performance.
+
+### FPGA Development Tools
+
+AMD Xilinx Vivado
+
+Verilog / SystemVerilog
+
+Xilinx FPGA development boards
+
+Integrated Logic Analyzer (ILA)
+
+### FPGA Evaluation
+
+The implementation can be evaluated using:
+
+Maximum operating frequency
+
+LUT utilization
+
+Flip-flop utilization
+
+BRAM utilization
+
+DSP utilization
+
+Inference latency
+
+Accelerator throughput
+
+Power consumption (where supported)
+
+## ASIC Physical Design Flow
+
+The SoC can also be taken through an open-source ASIC implementation flow.
+
+### Physical Design Stages
+
+RTL Design
+
+RTL Simulation
+
+Lint Analysis
+
+Logic Synthesis
+
+Floorplanning
+
+Power Planning
+
+Placement
+
+Clock Tree Synthesis
+
+Routing
+
+Static Timing Analysis
+
+Design Rule Checking
